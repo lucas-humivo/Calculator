@@ -158,5 +158,24 @@ namespace Calculator
             txtBoxCollector.Text = "0";
             Operation = "-";
         }
+
+        private void btnMul_Click(object sender, EventArgs e)
+        {
+            FirstNumber = Convert.ToDouble(txtBoxCollector.Text);
+            txtBoxCollector.Text = "0";
+            Operation = "*";
+        }
+
+        private void btnDiv_Click(object sender, EventArgs e)
+        {
+            FirstNumber = Convert.ToDouble(txtBoxCollector.Text);
+            txtBoxCollector.Text = "0";
+            Operation = "/";
+        }
+
+        private void btnDot_Click(object sender, EventArgs e)
+        {
+            txtBoxCollector.Text = txtBoxCollector.Text + ".";
+        }
     }
 }
