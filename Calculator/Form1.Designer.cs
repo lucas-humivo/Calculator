@@ -210,6 +210,7 @@
             this.btnCLR.TabIndex = 13;
             this.btnCLR.Text = "C";
             this.btnCLR.UseVisualStyleBackColor = true;
+            this.btnCLR.Click += new System.EventHandler(this.btnCLR_Click);
             // 
             // button15
             // 
@@ -272,6 +273,7 @@
             this.btnEqual.TabIndex = 19;
             this.btnEqual.Text = "=";
             this.btnEqual.UseVisualStyleBackColor = true;
+            this.btnEqual.Click += new System.EventHandler(this.btnEqual_Click);
             // 
             // button21
             // 

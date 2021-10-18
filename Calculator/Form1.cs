@@ -177,5 +177,41 @@ namespace Calculator
         {
             txtBoxCollector.Text = txtBoxCollector.Text + ".";
         }
+
+        private void btnCLR_Click(object sender, EventArgs e)
+        {
+            txtBoxCollector.Text = "0";
+        }
+
+        private void btnEqual_Click(object sender, EventArgs e)
+        {
+            double SecondNumber;
+            double Result;
+
+            SecondNumber = Convert.ToDouble(txtBoxCollector.Text);
+
+            if (Operation == "+")
+            {
+                Result = (FirstNumber + SecondNumber);
+                txtBoxCollector.Text = Convert.ToString(Result);
+                FirstNumber = Result;
+            }
+
+            if (Operation == "-")
+            {
+                Result = (FirstNumber - SecondNumber);
+                txtBoxCollector.Text = Convert.ToString(Result);
+                FirstNumber = Result;
+            }
+
+            if (Operation == "/")
+            {
+                Result = (FirstNumber / SecondNumber);
+                txtBoxCollector.Text = Convert.ToString(Result);
+                FirstNumber = Result;
+            }
+        }
+
+
     }
 }
