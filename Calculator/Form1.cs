@@ -206,7 +206,22 @@ namespace Calculator
 
             if (Operation == "/")
             {
-                Result = (FirstNumber / SecondNumber);
+                if (SecondNumber == 0)
+                {
+                    txtBoxCollector.Text = "Cannot divide by zero.";
+                }
+                else
+                {
+                    Result = Math.Round((FirstNumber / SecondNumber),15);
+                    txtBoxCollector.Text = Convert.ToString(Result);
+                    FirstNumber = Result;
+                }
+
+            }
+
+            if (Operation == "*")
+            {
+                Result = (FirstNumber * SecondNumber);
                 txtBoxCollector.Text = Convert.ToString(Result);
                 FirstNumber = Result;
             }

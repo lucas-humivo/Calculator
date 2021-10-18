@@ -331,12 +331,13 @@
             // 
             // txtBoxCollector
             // 
-            this.txtBoxCollector.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtBoxCollector.Location = new System.Drawing.Point(12, 52);
+            this.txtBoxCollector.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBoxCollector.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.txtBoxCollector.Location = new System.Drawing.Point(12, 103);
             this.txtBoxCollector.Name = "txtBoxCollector";
-            this.txtBoxCollector.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtBoxCollector.Size = new System.Drawing.Size(318, 80);
+            this.txtBoxCollector.Size = new System.Drawing.Size(318, 29);
             this.txtBoxCollector.TabIndex = 26;
+            this.txtBoxCollector.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // button27
             // 
@@ -381,8 +382,9 @@
             this.Controls.Add(this.btnNo3);
             this.Controls.Add(this.btnNo2);
             this.Controls.Add(this.btnNo1);
+            this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Calculator";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
