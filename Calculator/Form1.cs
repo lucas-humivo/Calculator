@@ -18,6 +18,170 @@ namespace Calculator
         public Form1()
         {
             InitializeComponent();
+            KeyPreview = true;
+            KeyDown += new KeyEventHandler(Form_KeyDown);
+            ActiveControl = btnEqual;
+        }
+
+        private void Form_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                Application.Exit();
+            }
+
+            if (e.KeyCode == Keys.NumPad0)
+            {
+                if (txtBoxCollector.Text == "0" && txtBoxCollector.Text != null)
+                {
+                    txtBoxCollector.Text = "0";
+                }
+                else
+                {
+                    txtBoxCollector.Text = txtBoxCollector.Text + "0";
+                }
+            }
+
+            if (e.KeyCode == Keys.NumPad1)
+            {
+                if (txtBoxCollector.Text == "0" && txtBoxCollector.Text != null)
+                {
+                    txtBoxCollector.Text = "1";
+                }
+                else
+                {
+                    txtBoxCollector.Text = txtBoxCollector.Text + "1";
+                }
+            }
+
+            if (e.KeyCode == Keys.NumPad2)
+            {
+                if (txtBoxCollector.Text == "0" && txtBoxCollector.Text != null)
+                {
+                    txtBoxCollector.Text = "2";
+                }
+                else
+                {
+                    txtBoxCollector.Text = txtBoxCollector.Text + "2";
+                }
+            }
+
+            if (e.KeyCode == Keys.NumPad3)
+            {
+                if (txtBoxCollector.Text == "0" && txtBoxCollector.Text != null)
+                {
+                    txtBoxCollector.Text = "3";
+                }
+                else
+                {
+                    txtBoxCollector.Text = txtBoxCollector.Text + "3";
+                }
+            }
+
+            if (e.KeyCode == Keys.NumPad4)
+            {
+                if (txtBoxCollector.Text == "0" && txtBoxCollector.Text != null)
+                {
+                    txtBoxCollector.Text = "4";
+                }
+                else
+                {
+                    txtBoxCollector.Text = txtBoxCollector.Text + "4";
+                }
+            }
+
+            if (e.KeyCode == Keys.NumPad5)
+            {
+                if (txtBoxCollector.Text == "0" && txtBoxCollector.Text != null)
+                {
+                    txtBoxCollector.Text = "5";
+                }
+                else
+                {
+                    txtBoxCollector.Text = txtBoxCollector.Text + "5";
+                }
+            }
+
+            if (e.KeyCode == Keys.NumPad6)
+            {
+                if (txtBoxCollector.Text == "0" && txtBoxCollector.Text != null)
+                {
+                    txtBoxCollector.Text = "6";
+                }
+                else
+                {
+                    txtBoxCollector.Text = txtBoxCollector.Text + "6";
+                }
+            }
+
+            if (e.KeyCode == Keys.NumPad7)
+            {
+                if (txtBoxCollector.Text == "0" && txtBoxCollector.Text != null)
+                {
+                    txtBoxCollector.Text = "7";
+                }
+                else
+                {
+                    txtBoxCollector.Text = txtBoxCollector.Text + "7";
+                }
+            }
+
+            if (e.KeyCode == Keys.NumPad8)
+            {
+                if (txtBoxCollector.Text == "0" && txtBoxCollector.Text != null)
+                {
+                    txtBoxCollector.Text = "8";
+                }
+                else
+                {
+                    txtBoxCollector.Text = txtBoxCollector.Text + "8";
+                }
+            }
+
+            if (e.KeyCode == Keys.NumPad9)
+            {
+                if (txtBoxCollector.Text == "0" && txtBoxCollector.Text != null)
+                {
+                    txtBoxCollector.Text = "9";
+                }
+                else
+                {
+                    txtBoxCollector.Text = txtBoxCollector.Text + "9";
+                }
+            }
+
+            if (e.KeyCode == Keys.Add)
+            {
+                FirstNumber = Convert.ToDouble(txtBoxCollector.Text);
+                txtBoxCollector.Text = "0";
+                Operation = "+";
+            }
+
+            if (e.KeyCode == Keys.Subtract)
+            {
+                FirstNumber = Convert.ToDouble(txtBoxCollector.Text);
+                txtBoxCollector.Text = "0";
+                Operation = "-";
+            }
+
+            if (e.KeyCode == Keys.Divide)
+            {
+                FirstNumber = Convert.ToDouble(txtBoxCollector.Text);
+                txtBoxCollector.Text = "0";
+                Operation = "/";
+            }
+
+            if (e.KeyCode == Keys.Multiply)
+            {
+                FirstNumber = Convert.ToDouble(txtBoxCollector.Text);
+                txtBoxCollector.Text = "0";
+                Operation = "*";
+            }
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnEqual.PerformClick();
+            }
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -226,7 +390,5 @@ namespace Calculator
                 FirstNumber = Result;
             }
         }
-
-
     }
 }
