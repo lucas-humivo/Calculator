@@ -56,6 +56,9 @@
             this.button26 = new System.Windows.Forms.Button();
             this.txtBoxCollector = new System.Windows.Forms.TextBox();
             this.button27 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnPow = new System.Windows.Forms.Button();
+            this.btnSqr = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnNo1
@@ -349,11 +352,47 @@
             this.button27.Text = "DEL";
             this.button27.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button1.Location = new System.Drawing.Point(12, 221);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 50);
+            this.button1.TabIndex = 28;
+            this.button1.Text = "1/x";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // btnPow
+            // 
+            this.btnPow.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnPow.Location = new System.Drawing.Point(93, 223);
+            this.btnPow.Name = "btnPow";
+            this.btnPow.Size = new System.Drawing.Size(75, 50);
+            this.btnPow.TabIndex = 30;
+            this.btnPow.Text = "x²";
+            this.btnPow.UseVisualStyleBackColor = true;
+            this.btnPow.Click += new System.EventHandler(this.btnPow_Click);
+            // 
+            // btnSqr
+            // 
+            this.btnSqr.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnSqr.Location = new System.Drawing.Point(174, 223);
+            this.btnSqr.Name = "btnSqr";
+            this.btnSqr.Size = new System.Drawing.Size(75, 50);
+            this.btnSqr.TabIndex = 29;
+            this.btnSqr.Text = "√";
+            this.btnSqr.UseVisualStyleBackColor = true;
+            this.btnSqr.UseWaitCursor = true;
+            this.btnSqr.Click += new System.EventHandler(this.btnSqr_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(344, 507);
+            this.Controls.Add(this.btnPow);
+            this.Controls.Add(this.btnSqr);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.button27);
             this.Controls.Add(this.txtBoxCollector);
             this.Controls.Add(this.button26);
@@ -421,6 +460,9 @@
         private System.Windows.Forms.Button button26;
         private System.Windows.Forms.TextBox txtBoxCollector;
         private System.Windows.Forms.Button button27;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnPow;
+        private System.Windows.Forms.Button btnSqr;
     }
 }
 

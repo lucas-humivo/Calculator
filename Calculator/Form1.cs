@@ -177,6 +177,7 @@ namespace Calculator
                 txtBoxCollector.Text = "0";
                 Operation = "*";
             }
+
             if (e.KeyCode == Keys.Enter)
             {
                 btnEqual.PerformClick();
@@ -336,7 +337,18 @@ namespace Calculator
             txtBoxCollector.Text = "0";
             Operation = "/";
         }
-
+        private void btnPow_Click(object sender, EventArgs e)
+        {
+            FirstNumber = Convert.ToDouble(txtBoxCollector.Text);
+            Operation = "^";
+            btnEqual.PerformClick();
+        }
+        private void btnSqr_Click(object sender, EventArgs e)
+        {
+            FirstNumber = Convert.ToDouble(txtBoxCollector.Text);
+            Operation = "Sqr";
+            btnEqual.PerformClick();
+        }
         private void btnDot_Click(object sender, EventArgs e)
         {
             txtBoxCollector.Text = txtBoxCollector.Text + ".";
@@ -383,9 +395,23 @@ namespace Calculator
 
             }
 
+            if (Operation == "^")
+            {
+                Result = Math.Pow(FirstNumber, 2);
+                txtBoxCollector.Text = Convert.ToString(Result);
+                FirstNumber = Result;
+            }
+
             if (Operation == "*")
             {
                 Result = (FirstNumber * SecondNumber);
+                txtBoxCollector.Text = Convert.ToString(Result);
+                FirstNumber = Result;
+            }
+
+            if (Operation == "Sqr")
+            {
+                Result = Math.Sqrt(FirstNumber);
                 txtBoxCollector.Text = Convert.ToString(Result);
                 FirstNumber = Result;
             }
