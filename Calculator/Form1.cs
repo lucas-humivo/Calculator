@@ -349,6 +349,12 @@ namespace Calculator
             Operation = "Sqr";
             btnEqual.PerformClick();
         }
+        private void btn1divx_Click(object sender, EventArgs e)
+        {
+            FirstNumber = Convert.ToDouble(txtBoxCollector.Text);
+            Operation = "1divx";
+            btnEqual.PerformClick();
+        }
         private void btnDot_Click(object sender, EventArgs e)
         {
             txtBoxCollector.Text = txtBoxCollector.Text + ".";
@@ -415,6 +421,22 @@ namespace Calculator
                 txtBoxCollector.Text = Convert.ToString(Result);
                 FirstNumber = Result;
             }
+
+            if (Operation == "1divx")
+            {
+                if (FirstNumber == 0)
+                {
+                    txtBoxCollector.Text = "Cannot divide by zero.";
+                }
+                else
+                {
+                    Result = Math.Round((1 / FirstNumber), 15);
+                    txtBoxCollector.Text = Convert.ToString(Result);
+                    FirstNumber = Result;
+                }
+            }
         }
+
+
     }
 }
